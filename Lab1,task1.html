@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML</title>
+  <script>
+   document.createElement('aside');
+   document.createElement('article');
+  </script>
+  <style>
+   aside {
+    background: #f0f0f0;
+    padding: 10px;
+    width: 200px;
+    float: right;
+   }
+   article {
+    margin-right: 240px;
+    display: block;
+   }
+  </style>
+ </head> 
+ <body>
+<header>
+    <h1>HTML</h1>
+  </header>
+  <article>
+    <h2>Теги</h2>
+  </article>
+  <footer>
+  <aside>
+   <p>Экономьте электричество</p>
+   <p>Сортируйте мусор</p>
+   <p>Любите окружающую среду :)</p>
+  </aside>
+   <main>
+    Жили-были три китайца: Як, Як-цедрак, Як-цедрак-цедрак-цедрони.
+Жили-были три китайки: Цыпа, Цыпа-дрыпа, Цыпа-дрыпа-дрымпампони.
+Все они переженились: Як на Цыпе, Як-цедрак на Цыпе-дрыпе,
+Як-цедрак-цедрак-цедрони на Цыпе-дрыпе-дрымпампони.
+И у них родились дети. У Яка с Цыпой — Шах, у Яка-цедрака 
+с Цыпой-дрыпой — Шах-шарах, у Яка-цедрака-цедрака-цедрони с
+ Цыпой-дрыпой-дрымпампони — <mark>Шах-шарах-шарах-широни.<mark> 
+  </main>
+   <p>Linkin Park - Numb</p>
+  <audio controls>
+         <source src="linkin.mp3" type="audio/mp3">
+		 <source src="linkin.ogg" type="audio/mpeg">
+		 <source src="linkin.wav" type="audio/mpeg">
+         <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+     Тег audio не поддерживается вашим браузером.  
+  </audio>
+  <p dir="rtl"><bdi>土曜日</bdi> — суббота</p>   
+  <p>Читается как доё:би, do,tsuci означает земля = суббота день земли.</p>
+   <script> 
+   window.onload = function() {
+    var drawingCanvas = document.getElementById('smile');
+    if(drawingCanvas && drawingCanvas.getContext) {
+     var context = drawingCanvas.getContext('2d');
+    
+     context.strokeStyle = "#000";
+     context.fillStyle = "#fc0";
+     context.beginPath();
+     context.arc(100,100,50,0,Math.PI*2,true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+     
+     context.fillStyle = "#fff";
+     context.beginPath();
+     context.arc(84,90,8,0,Math.PI*2,true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+     
+     context.beginPath();
+     context.arc(116,90,8,0,Math.PI*2,true);
+     context.closePath();
+     context.stroke();
+     context.fill();
+     
+     context.beginPath();
+     context.moveTo(70,115);
+     context.quadraticCurveTo(100,130,130,115);
+     context.quadraticCurveTo(100,150,70,115); 
+     context.closePath();
+     context.stroke();
+     context.fill();
+    }
+   }
+  </script>
+ </head>
+ <body>
+  <canvas id="smile" width="200" height="200">
+    <p>Ваш браузер не поддерживает рисование.</p>
+  </canvas>
+  <p>Выберите язык:</p>
+  <p><input list="character">
+   <datalist id="character">
+    <option value="русский"></option>
+    <option value="украинский"></option>
+    <option value="английский"></option>
+   </datalist></p>
+   <details>Привет)</details>
+    <button id="openDialog">Открыть окно</button>
+  <dialog>
+   <p>Полинезийцы называют Млечный путь Манго-Роа-И-Ата, 
+      что в переводе с маори означает «Длинная акула на рассвете».</p>
+   <p><button id="closeDialog">Закрыть окно</button></p>
+  </dialog>
+  <script>
+   var dialog = document.querySelector('dialog');
+   document.querySelector('#openDialog').onclick = function() {
+    dialog.show(); 
+   }
+   document.querySelector('#closeDialog').onclick = function() {
+    dialog.close(); 
+   }
+  </script>
+    <embed type="video/webm"
+       src="flower.mp4"
+       width="250"
+       height="200">
+<figure>
+    <p><img src="blue.jpg" alt=""></p>
+    <figcaption>Цвет неба и воды, так говорят о голубом цвете. Этот цвет символизирует воздушность, безмятежность, спокойствие, постоянство, нежность, легкость.
+	</figcaption>
+	   </figure>
+	    <nav><a href="1.html">Голубой</a> | <a href="2.html">Лазурный</a> |
+       <a href="3.html">Бирюзовый</a> | <a href="4.html">Синий</a></nav>
+	   <div contextmenu = "testmenu"> 
+			Кликни по мне правой кнопкой мыши.
+			<menu type = "context" id = "testmenu">  
+				<menuitem label = "like"></menuitem> 
+				<menuitem label = "dislike"></menuitem> 
+			</menu>
+			<p>Температура воды</p>
+  <meter value="0" max="100" low="10" high="60">Низкая</meter>
+  <meter value="30" max="100" low="10" high="60">Нормальная</meter>
+  <meter value="80" max="100" low="10" high="60">Горячая</meter>
+  <meter value="100" max="100">Кипяток</meter>
+  <form oninput="result.value=(cm.value/2.54).toFixed(2)">
+    <p>Введите длину в сантиметрах: 
+    <input type="number" name="cm" autofocus></p>
+    <p>Длина в дюймах: <output name="result">0</output></p>
+  </form>
+  <p>Пожалуйста, подождите, фотографии загружаются.</p>
+  <progress max="100" value="25">
+    Загружено на <span id="value">25</span>%
+  </progress>
+    <p><time>1969-07-21</time> высадка человека на Луну.</p>
+	<p>Самое длинное слово из химии</p>
+  <p class="word">метоксихлор<wbr>диэтиламино<wbr>метил<wbr>бутил<wbr>амино<wbr>акридин</p>
+  <details>
+   <summary>Информация об авторе</summary>
+   <p>Осадча Катерина</p>
+  </details>
+  
+  
+  
+ </body> 
+</html>
+ </body> 
+</html>
